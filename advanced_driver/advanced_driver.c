@@ -226,7 +226,7 @@ static ssize_t device_read(struct file *file, char *buffer, size_t length, loff_
 
     *offset += length;
 
-    printk(KERN_INFO "multi_driver: Read requested\n");
+    pr_info("multi_driver: Read requested\n");
     return length;
 }
 
@@ -243,7 +243,7 @@ static ssize_t device_write(struct file *file, const char *buffer, size_t length
     dev->size = length;
     *offset = 0;
 
-    printk(KERN_INFO "multi_driver: Write requested\n");
+    pr_info("multi_driver: Write requested\n");
     return length;
 }
 
